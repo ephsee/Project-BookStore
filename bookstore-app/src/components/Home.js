@@ -1,8 +1,17 @@
 import React from 'react'
 
 function Home() {
+
+  function handleClick () {
+    fetch('http://localhost:9293/')
+      .then(r=>r.json())
+      .then(console.log)
+  }
+
+
+
   return (
-    <div>Home</div>
+    <button onClick={handleClick}>press me</button>
   )
 }
 

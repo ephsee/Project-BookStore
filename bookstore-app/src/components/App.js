@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Cart from './Cart'
 import NavBar from './NavBar'
-import '../App.css';
+import '../index.css';
 
 function App() {
 

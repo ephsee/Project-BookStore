@@ -1,4 +1,4 @@
-body {
+.body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +7,76 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+.code {
+  
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  text-align: center;
+  background-color: #575A4B;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.topnav {
+  background-color: #CFCFEA ;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #A89B9D ;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: gray;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #A89B9D;
+  color: white;
+}
+
+.cards {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  transition: 1s ease;
+}
+.card .image {
+  height: 225px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card .image img {
+  max-width: 100%;
+  max-height: 225px;
+  width: auto;
+  height: auto;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
 }
