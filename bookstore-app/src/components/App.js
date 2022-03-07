@@ -2,13 +2,14 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Cart from './Cart'
-import Navbar from './Navbar'
+import NavBar from './NavBar'
+import '../App.css';
 
 function App() {
 
     return (
-      <>
-        <Navbar />
+      <div className="App App-header">
+        <NavBar />
   
         <Switch>
           
@@ -22,7 +23,7 @@ function App() {
   
         </Switch>
         
-      </>
+      </div>
     );
   }
   
