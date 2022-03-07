@@ -1,2 +1,2 @@
-# Porject-BookStore
+# Project-BookStore
 Dalton, Griffin, Francois
