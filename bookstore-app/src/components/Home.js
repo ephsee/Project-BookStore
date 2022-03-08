@@ -30,10 +30,10 @@ function Home() {
   return (
     <>
     <Button class="ui button" onClick={console.log('hi')}>press me</Button>
-    {/* <Button circular icon='home' /> */}
+    <Button circular icon='home' />
     {books.map((bookitem, index) => {
        if (index < 6){
-        return <BookCard bookitem = {bookitem}/>
+        return <BookCard key = {bookitem.id} bookitem = {bookitem}/>
        }
       }
     )}
