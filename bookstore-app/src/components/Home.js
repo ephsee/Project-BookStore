@@ -12,20 +12,6 @@ function Home() {
   }, [])
 
   const sortBy = (arr, key) => {
-    // if (typeof(arr[0][key]) != 'number' ) {
-    // if (key === 'quantity')
-    //   arr.sort((a,b) => {
-    //     if (a[key] < b[key]){
-    //       return -1
-    //     }
-    //     else if (a[key] > b[key]) {
-    //       return 1
-    //     }
-    //     else if (a[key] === b[key]) {
-    //       return 0
-    //     }
-    //   })
-
     arr.sort((a,b) => {
       if (key != 'quantity'){
         if (a[key].toLowerCase() < b[key].toLowerCase()){
@@ -50,20 +36,6 @@ function Home() {
         }
       }
     })
-    // }
-    // else{
-    //   arr.sort((a,b) => {
-    //     if (a[key] < b[key]){
-    //       return -1
-    //     }
-    //     else if (a[key] > b[key]) {
-    //       return 1
-    //     }
-    //     else if (a[key] === b[key]) {
-    //       return 0
-    //     }
-      // })
-    // }
   }
   const sortAlphaBooks = [...books]
   sortBy(sortAlphaBooks, 'title')
