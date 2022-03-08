@@ -4,7 +4,7 @@ import {Grid} from 'semantic-ui-react'
 function BooksCollection({books}) {
     const sortBy = (arr, key) => {
         arr.sort((a,b) => {
-          if (key != 'quantity'){
+          if (key !== 'quantity'){
             if (a[key].toLowerCase() < b[key].toLowerCase()) return -1
             else if (a[key].toLowerCase() > b[key].toLowerCase()) return 1
             else if (a[key].toLowerCase() === b[key].toLowerCase()) return 0

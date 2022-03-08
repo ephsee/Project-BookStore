@@ -1,24 +1,47 @@
 import React from 'react'
-import {Card, Grid} from 'semantic-ui-react'
+import {Card, Grid, Button, Image} from 'semantic-ui-react'
+import {useHistory} from 'react-router-dom'
 
 function BookCard({bookitem}) {
+  const history = useHistory()
+  function check(){
+    history.push(`/books/${bookitem.id}`)
+  }
   
+  const button = (
+    <>
+      <Button.Group floated='right'>
+        <Button onClick={() => console.log('hi')} icon = 'heart outline'/>
+      </Button.Group>
+      <Button.Group>
+        <Button onClick={()=>console.log(bookitem.title)} icon='add to cart'/>
+      </Button.Group>
+    </>
+  )
+  
+  const likeButton = () => {
+    
+  }
 
 
   return (
     <Grid.Column>
-        {/* <p>{bookitem.title}</p>
-        <p>{bookitem.author}</p>
-        <p>{bookitem.genre}</p>
-        <p>{bookitem.publisher}</p>
-        <p>In Stock: {bookitem.quantity}</p> */}
-        <Card centered
-          image={bookitem.image}
-          header={bookitem.title}
-          meta={bookitem.author}
-          description={bookitem.description}
-          // extra={`Published by: ${bookitem.publisher}`}
-          />
+      <Card>
+        <Image onClick={()=> check()} src = {bookitem.image}/>
+        <Card.Content onClick={()=>check()}>
+          <Card.Header>{bookitem.title}</Card.Header>
+          <Card.Meta>
+            <span>{bookitem.author}</span>
+          </Card.Meta>
+          <Card.Description>
+            {bookitem.description}
+          </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          {button}
+          {likeButton}
+        </Card.Content>
+      </Card>
     </Grid.Column>
   )
 }

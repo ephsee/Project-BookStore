@@ -5,17 +5,30 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+.ui.segment{
+  background-color: #3c4c34
+}
+
+.ui.huge.image{
+  background-color: #3c4c34;
 }
 
 .code {
-  
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+.ui.centered.grid{
+  background-color: #3c4c34;
+}
+
+
 .App {
   text-align: center;
-  background-color: #575A4B;
+  background-color: #3c4c34;
   /* font-size: calc(10px + 2vmin); */
   color: white;
 }
