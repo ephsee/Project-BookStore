@@ -12,28 +12,78 @@ function Home() {
   }, [])
 
   const sortBy = (arr, key) => {
+    // if (typeof(arr[0][key]) != 'number' ) {
+    // if (key === 'quantity')
+    //   arr.sort((a,b) => {
+    //     if (a[key] < b[key]){
+    //       return -1
+    //     }
+    //     else if (a[key] > b[key]) {
+    //       return 1
+    //     }
+    //     else if (a[key] === b[key]) {
+    //       return 0
+    //     }
+    //   })
+
     arr.sort((a,b) => {
-      if (a[key].toLowerCase() < b[key].toLowerCase()){
-        return -1
+      if (key != 'quantity'){
+        if (a[key].toLowerCase() < b[key].toLowerCase()){
+          return -1
+        }
+        else if (a[key].toLowerCase() > b[key].toLowerCase()) {
+          return 1
+        }
+        else if (a[key].toLowerCase() === b[key].toLowerCase()) {
+          return 0
+        }
       }
-      else if (a[key].toLowerCase() > b[key].toLowerCase()) {
-        return 1
-      }
-      else if (a[key].toLowerCase() === b[key].toLowerCase()) {
-        return 0
+      else{
+        if (a[key] < b[key]){
+          return -1
+        }
+        else if (a[key] > b[key]) {
+          return 1
+        }
+        else if (a[key] === b[key]) {
+          return 0
+        }
       }
     })
+    // }
+    // else{
+    //   arr.sort((a,b) => {
+    //     if (a[key] < b[key]){
+    //       return -1
+    //     }
+    //     else if (a[key] > b[key]) {
+    //       return 1
+    //     }
+    //     else if (a[key] === b[key]) {
+    //       return 0
+    //     }
+      // })
+    // }
   }
-  let sortAlphaBooks = [...books]
+  const sortAlphaBooks = [...books]
   sortBy(sortAlphaBooks, 'title')
   console.log(sortAlphaBooks, 'sorted titles')
-  let sortGenreBooks = [...books]
+  
+  const sortGenreBooks = [...books]
   sortBy(sortGenreBooks, 'genre')
   console.log(sortGenreBooks , 'genre')
+  
   const sortAuthorBooks = [...books]
   sortBy(sortAuthorBooks, 'author')
   console.log(sortAuthorBooks, 'author')
 
+  const sortQuantBooks = [...books]
+  sortBy(sortQuantBooks, 'quantity')
+  console.log(sortQuantBooks, 'quantity')
+
+  const sortPubBooks = [...books]
+  sortBy(sortPubBooks, 'publisher')
+  console.log(sortPubBooks, 'publisher')
 
   return (
     <>
