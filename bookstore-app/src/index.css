@@ -16,7 +16,7 @@
 .App {
   text-align: center;
   background-color: #575A4B;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -44,7 +44,7 @@
   background-color: #A89B9D;
   color: white;
 }
-
+/* 
 .cards {
   list-style: none;
   display: flex;
@@ -79,4 +79,4 @@
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   transition: 1s ease;
-}
+} */
