@@ -6,12 +6,8 @@ import {BrowserRouter as Router } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-
-    <Router>
-      <App />
-    </Router>
-    
-  </React.StrictMode>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
