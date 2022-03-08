@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import BookCard from"./BookCard"
+import {Button} from 'semantic-ui-react'
 
 function Home() {
   const [books, setBooks] = useState([])
@@ -28,7 +29,8 @@ function Home() {
 
   return (
     <>
-    <button onClick={console.log('hi')}>press me</button>
+    <Button class="ui button" onClick={console.log('hi')}>press me</Button>
+    {/* <Button circular icon='home' /> */}
     {books.map((bookitem, index) => {
        if (index < 6){
         return <BookCard bookitem = {bookitem}/>
