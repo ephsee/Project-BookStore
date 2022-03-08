@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <>
-    <Button class="ui button" onClick={console.log('hi')}>press me</Button>
+    <Button className="ui button" onClick={console.log('hi')}>press me</Button>
     <Button circular icon='home' />
     {books.map((bookitem, index) => {
        if (index < 6){
