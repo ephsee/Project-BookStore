@@ -1,17 +1,32 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 function Home() {
+  const [books, setBooks] = useState([])
 
-  function handleClick () {
-    fetch('http://localhost:9293/')
+  useEffect( () => {
+    fetch('http://localhost:9293/books')
       .then(r=>r.json())
-      .then(console.log)
-  }
+      .then(setBooks)
+  }, [])
 
+  let quantSortedBooks = books.sort((a,b) => {
+    if (a.quantity < b.quantity){
+      return -1
+    }
+    else if (a.quantity > b.quantity) {
+      return 1
+    }
+    else{
+      return 0
+    }
+  })
+
+  
+  console.log(quantSortedBooks)
 
 
   return (
-    <button onClick={handleClick}>press me</button>
+    <button onClick={console.log('hi')}>press me</button>
   )
 }
 
