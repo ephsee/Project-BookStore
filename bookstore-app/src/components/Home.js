@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import BookCard from"./BookCard"
 
 function Home() {
   const [books, setBooks] = useState([])
@@ -8,7 +9,7 @@ function Home() {
       .then(r=>r.json())
       .then(setBooks)
   }, [])
-
+  console.log(books)
   let quantSortedBooks = books.sort((a,b) => {
     if (a.quantity < b.quantity){
       return -1
@@ -26,7 +27,15 @@ function Home() {
 
 
   return (
+    <>
     <button onClick={console.log('hi')}>press me</button>
+    {books.map((bookitem, index) => {
+       if (index < 6){
+        return <BookCard bookitem = {bookitem}/>
+       }
+      }
+    )}
+    </>
   )
 }
 
