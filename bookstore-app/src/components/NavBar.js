@@ -1,15 +1,19 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
+import {Button} from 'semantic-ui-react'
 
 function NavBar() {
   return (
     
     <div className='topnav container-fluid'>
       <div  className='col ms-5'>
-        <NavLink exact to='/'><p className="ps-3 pe-3" style={{fontFamily: "Amaranth", fontSize: "30px", color: "#816C61"}}>Home</p></NavLink>
+        <NavLink exact to='/'><Button circular icon='home'/></NavLink>
       </div>
       <div className='col'>
-        <NavLink to='/cart'><p className="ps-3 pe-3" style={{fontFamily: "Amaranth", fontSize: "30px", color: "#816C61"}}>Cart</p></NavLink>
+        <NavLink to='/cart'><Button icon='shopping cart'/></NavLink>
+      </div>
+      <div className='col'>
+        <NavLink to='/books'><Button circular icon='book' /></NavLink>
       </div>
     </div>
   )
