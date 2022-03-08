@@ -25,7 +25,7 @@ function App() {
             <Cart/>
           </Route>
           <Route path="/books">
-            <BooksCollection books={books}/>
+            <BooksCollection books={books} setBooks={setBooks}/>
           </Route>
           <Route exact path="/">
             <Home books = {books}/>

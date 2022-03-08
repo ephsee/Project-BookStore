@@ -1,7 +1,26 @@
 import BookCard from "./BookCard"
-import {Grid} from 'semantic-ui-react'
+import {Grid, Form, Button} from 'semantic-ui-react'
+import {useState} from 'react'
 
 function BooksCollection({books}) {
+
+  const [findBook, setFindBook] = useState("")
+
+  function searchBooks(e) {
+    setFindBook(e.target.value)
+  }
+
+  console.log(books)
+
+  const searchResult = books.filter((book) => {
+    return (
+      book.title.toLowerCase().includes(findBook.toLowerCase()) || book.author.toLowerCase().includes(findBook.toLowerCase())
+    )
+  })
+
+  const foundBooks = searchResult.map( b => <BookCard key={b.id} bookitem={b} /> )
+
+
     const sortBy = (arr, key) => {
         arr.sort((a,b) => {
           if (key != 'quantity'){
@@ -41,9 +60,15 @@ function BooksCollection({books}) {
 
         <div>
             <button onClick = {() => console.log(books)}>button</button>
+            <Form>
+              <Form.Field>
+                <label></label>
+                <input onChange={searchBooks} placeholder="SEARCH"/>
+              </Form.Field>
+            </Form>
             <Grid centered>
                 <Grid.Row centered columns = {5}>
-                    {collection}
+                    {foundBooks}
                 </Grid.Row>
             </Grid>
         </div>
