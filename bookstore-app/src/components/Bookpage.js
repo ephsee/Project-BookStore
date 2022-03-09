@@ -6,7 +6,7 @@ function Bookpage({books}) {
     
     const book = (books[id-1])
     return(
-        <div className = "ui card">
+        <div className = "abook">
         <img src = {book.image}></img>
         <p>{book.title}</p>
         <p>{book.genre}</p>

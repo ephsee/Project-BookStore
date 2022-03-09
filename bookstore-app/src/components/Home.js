@@ -15,7 +15,11 @@ function Home({books}) {
   return (
     <>
       <div className='logo'>
-        <img src={require ('../assets/CoopAndPeasant.jpg')} alt='Coop and Peasant Logo' />  
+        <img src={require ('../assets/CoopAndPeasant.jpg')} alt='Coop and Peasant Logo' />
+        <div className='about'>
+          ABOUT STUFF
+          <p>something and something about the bookstore yadda yadda</p>
+        </div>
       </div>
       <Grid centered columns={10}>
         <Grid.Row>
