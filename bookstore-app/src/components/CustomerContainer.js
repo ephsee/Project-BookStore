@@ -7,7 +7,7 @@ function CustomerContainer({customers}) {
     const customer_cards = customers.map( c => {return <CustomerCard key = {c.id} c = {c} /> })
 
     return (
-        <div>CustomerContainer
+        <div className='customerContainer'>
             {customer_cards}
         </div>
     )

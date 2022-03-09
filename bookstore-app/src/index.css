@@ -23,28 +23,33 @@
   border-radius: 10px;
 }
 
-.ui.card>.content.extra,
+/* .ui.card>.content.extra,
 .ui.cards>.card>.content.extra {
   background-color: grey;
-}
+} */
 
 .ui.card {
   display: inline-block;
   margin: 10px;
+}
+.customerContainer{
+  width: 20%;
+  margin: auto;
+  padding: 10px;
 }
 
 .code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* 
 .about {
   background-color: rgb(55, 65, 83);
   color: white;
   width: 500px;
   padding: 10px;
   margin: auto;
-}
+} */
 
 /* .ui.centered.grid{
   background-color: #3c4c34;
