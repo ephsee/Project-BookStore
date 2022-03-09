@@ -31,6 +31,8 @@ function App() {
       .then(setOrders)
   }, [])
 
+  const [cart, setCart] = useState([])
+
 
   console.log(customers)
 
@@ -40,7 +42,7 @@ function App() {
         <Switch>
 
           <Route exact path="/books/:id">
-            <Bookpage books={books}/>
+            <Bookpage books={books} cart={cart} setCart={setCart}/>
           </Route>
 
           <Route exact path ='/customers/:id'>
@@ -52,7 +54,7 @@ function App() {
           </Route>
 
           <Route path="/cart">
-            <Cart/>
+            <Cart cart={cart}/>
           </Route>
 
           <Route path="/books">

@@ -42,14 +42,14 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* 
+ 
 .about {
   background-color: rgb(55, 65, 83);
   color: white;
   width: 500px;
   padding: 10px;
   margin: auto;
-} */
+}
 
 /* .ui.centered.grid{
   background-color: #3c4c34;
@@ -85,6 +85,7 @@
   /* background-color: #3c4c34; */
   /* font-size: calc(10px + 2vmin); */
   background: url("./assets/book1.jpg");
+  padding-bottom: 800px;
 }
 
 .bookCard{
