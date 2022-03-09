@@ -4,7 +4,9 @@ function Cart({cart}) {
 
   console.log("from CART", cart)
 
-  const showCart = cart.map( item => <div><ul><li key={item.id}> "{item.title}" by: {item.author} </li></ul></div>)
+  console.log(Object.values(cart))
+
+  const showCart = Object.values(cart).map( o => <div><ul><li key={o.id}> "{o.title}" by: {o.author}</li></ul></div>)
 
   return (
     <div>Cart

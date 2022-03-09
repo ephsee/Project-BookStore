@@ -31,7 +31,7 @@ function App() {
       .then(setOrders)
   }, [])
 
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState({})
 
 
   console.log(customers)

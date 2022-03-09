@@ -5,15 +5,16 @@ import {Button} from 'semantic-ui-react'
 function Bookpage({books, cart, setCart}) {
   const [showBook, setShowBook] = useState({})
   const { id } = useParams()
-
+  const book = (books[id-1])
   useEffect( () => {
     fetch(`http://localhost:9293/books/${id}`).then(r=>r.json()).then(setShowBook)
   }, [])
 
-  const book = (books[id-1])
+ 
 
+  //Change this for objects
   function handleBuy() {
-    setCart([book, ...cart])
+    setCart({...cart, [book.id]: book })
   }
 
   
