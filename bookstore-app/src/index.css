@@ -15,8 +15,7 @@
 }
 
 .ui.card>.content.extra,
-.ui.cards>.card>.content.extra, 
-{
+.ui.cards>.card>.content.extra {
   background-color: grey;
 }
 
