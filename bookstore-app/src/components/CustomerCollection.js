@@ -7,7 +7,6 @@ function CustomerCollection({customers, books, orders}) {
     const {id} = useParams()
     const [custColl, setCustColl] = useState([])
 
-    console.log('customer collection', customers[id - 1])
     useEffect( ()=> {
       fetch(`http://localhost:9293/customers/${id}/books`)
         .then(r=>r.json())

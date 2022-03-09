@@ -4,14 +4,14 @@ import {useHistory} from 'react-router-dom'
 
 function BookCard({bookitem}) {
   const history = useHistory()
-  function check(){
+  function bookPage(){
     history.push(`/books/${bookitem.id}`)
   }
   return (
     <Grid.Column className='bookCard'>
       <Card className='card'>
-        <Image onClick={()=> check()} src = {bookitem.image}/>
-        <Card.Content className ='cardContent' onClick={()=>check()}>
+        <Image onClick={()=> bookPage()} src = {bookitem.image}/>
+        <Card.Content className ='cardContent' onClick={()=>bookPage()}>
           <Card.Header>{bookitem.title}</Card.Header>
           <Card.Meta>
             <span>By: {bookitem.author}</span>
