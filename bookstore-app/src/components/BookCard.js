@@ -25,8 +25,8 @@ function BookCard({bookitem}) {
 
 
   return (
-    <Grid.Column>
-      <Card>
+    <Grid.Column className='bookCard'>
+      <Card className='card'>
         <Image onClick={()=> check()} src = {bookitem.image}/>
         <Card.Content onClick={()=>check()}>
           <Card.Header>{bookitem.title}</Card.Header>

@@ -8,6 +8,12 @@
 
 }
 
+.logo img{
+  width: 30%;
+  margin: auto;
+  border: 2px solid #444435;
+}
+
 .code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -20,6 +26,7 @@
 .searchbar {
   width: 50%;
   margin: auto;
+  padding-bottom: 8px;
 }
 
 .formtext {
@@ -38,6 +45,9 @@
   background: url("./assets/book1.jpg");
 }
 
+.bookCard{
+  padding:10px;
+}
 
 /* .topnav {
   background-color: #CFCFEA ;
