@@ -8,6 +8,14 @@
 
 }
 
+.cardContent{
+  background: rgb(160,160,160) !important;
+}
+
+.bookContainer{
+  width: 90%;
+  margin: auto;
+}
 .logo img{
   width: 30%;
   margin: auto;

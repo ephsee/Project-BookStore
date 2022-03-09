@@ -43,12 +43,12 @@ function App() {
             <Bookpage books={books}/>
           </Route>
 
-          <Route path='/customers'>
-            <CustomerContainer customers={customers} />
+          <Route exact path ='/customers/:id'>
+            <CustomerCollection customers={customers} orders={orders} books={books}/>  
           </Route>
 
-          <Route exact path ='/customers/:id'>
-            <CustomerCollection customers={customers}/>  
+          <Route path='/customers'>
+            <CustomerContainer customers={customers} />
           </Route>
 
           <Route path="/cart">

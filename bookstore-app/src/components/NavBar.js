@@ -24,7 +24,7 @@ function NavBar() {
          <Menu.Item name='Books' icon='book' />
       </NavLink>
       <NavLink to = '/customers'>
-          <Menu.Item  name='Customers' icon='user'/>
+          <Menu.Item  name='Customers' icon='users'/>
       </NavLink>
       <Menu.Menu position ='right'>
         <NavLink to = '/cart'>

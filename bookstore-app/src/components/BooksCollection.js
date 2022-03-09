@@ -67,11 +67,13 @@ function BooksCollection({books}) {
               </Form.Field>
             </Form>
             </div>
-            <Grid centered>
-                <Grid.Row centered columns = {5}>
+            <div className="bookContainer">
+              <Grid centered columns = {6}>
+                <Grid.Row>
                     {foundBooks}
                 </Grid.Row>
-            </Grid>
+              </Grid>
+            </div>
         </div>
         
     )
