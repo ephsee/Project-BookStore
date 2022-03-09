@@ -38,8 +38,10 @@ function BookCard({bookitem}) {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
+          <a>
           {button}
           {likeButton}
+          </a>
         </Card.Content>
       </Card>
     </Grid.Column>

@@ -17,7 +17,6 @@ function Home({books}) {
       <div className='logo'>
         <img src={require ('../assets/CoopAndPeasant.jpg')} alt='Coop and Peasant Logo' />  
       </div>
-      <Button className="ui button" onClick={() => console.log('hi')}>press me</Button>
       <Grid centered columns={10}>
         <Grid.Row>
           {displayCards}

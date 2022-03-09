@@ -8,34 +8,38 @@
 
 }
 
-.ui.segment{
-  background-color: #3c4c34
-}
-
-.ui.huge.image{
-  background-color: #3c4c34;
-}
-
 .code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.ui.centered.grid{
+/* .ui.centered.grid{
   background-color: #3c4c34;
+} */
+
+.searchbar {
+  width: 50%;
+  margin: auto;
+}
+
+.formtext {
+  align-items: center;
+  text-align: center;
+  /* color: white;
+  background-color: black; */
 }
 
 
 .App {
   text-align: center;
-  background-color: #3c4c34;
+  /* background-color: #3c4c34; */
   /* font-size: calc(10px + 2vmin); */
   color: white;
   background: url("./assets/book1.jpg");
 }
 
 
-.topnav {
+/* .topnav {
   background-color: #CFCFEA ;
   overflow: hidden;
 }
@@ -57,7 +61,7 @@
 .topnav a.active {
   background-color: #A89B9D;
   color: white;
-}
+} */
 /* 
 .cards {
   list-style: none;

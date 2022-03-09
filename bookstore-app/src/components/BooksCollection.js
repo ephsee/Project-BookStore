@@ -59,13 +59,14 @@ function BooksCollection({books}) {
     return(
 
         <div>
-            <button onClick = {() => console.log(books)}>button</button>
-            <Form>
+            <div className='searchbar'>
+            <Form >
               <Form.Field>
                 <label></label>
-                <input onChange={searchBooks} placeholder="SEARCH"/>
+                <input className="formtext" onChange={searchBooks} placeholder="SEARCH"/>
               </Form.Field>
             </Form>
+            </div>
             <Grid centered>
                 <Grid.Row centered columns = {5}>
                     {foundBooks}
