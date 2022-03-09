@@ -1,7 +1,6 @@
 import React from 'react'
 import BookCard from"./BookCard"
-import {Button, Grid, Image, Segment} from 'semantic-ui-react'
-import BooksCollection from './BooksCollection'
+import {Button, Grid} from 'semantic-ui-react'
 import '../assets/CoopAndPeasant.jpg'
 
 function Home({books}) {
@@ -15,13 +14,9 @@ function Home({books}) {
 
   return (
     <>
-      <Segment>
-        <Image src={require ('../assets/CoopAndPeasant.jpg')} size='huge' centered/>
-        <p>
-
-
-        </p>
-      </Segment>      
+      <div className='logo'>
+        <img src={require ('../assets/CoopAndPeasant.jpg')} alt='Coop and Peasant Logo' />  
+      </div>
       <Button className="ui button" onClick={() => console.log('hi')}>press me</Button>
       <Grid centered columns={10}>
         <Grid.Row>
