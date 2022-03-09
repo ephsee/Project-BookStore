@@ -2,13 +2,19 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Button} from 'semantic-ui-react'
 
-function Bookpage({books}) {
+function Bookpage({books, cart, setCart}) {
   const [showBook, setShowBook] = useState({})
   const { id } = useParams()
 
   useEffect( () => {
     fetch(`http://localhost:9293/books/${id}`).then(r=>r.json()).then(setShowBook)
   }, [])
+
+  const book = (books[id-1])
+
+  function handleBuy() {
+    setCart([book, ...cart])
+  }
 
   
   return(
@@ -18,7 +24,7 @@ function Bookpage({books}) {
       <p>{showBook.genre}</p>
       <p>{showBook.author}</p>
       <Button.Group>
-        <Button onClick={()=>console.log(showBook.title)} icon='add to cart'/>
+        <Button onClick={handleBuy} icon='add to cart'/>
       </Button.Group>
     </div>
   )
