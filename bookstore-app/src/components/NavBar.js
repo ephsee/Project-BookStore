@@ -16,7 +16,7 @@ function NavBar() {
     //     <NavLink to='/cart'><Button floated='right' icon='shopping cart'/></NavLink>
     //   </div>
     // </div>
-    <Menu size='large'>
+    <Menu inverted size='large'>
       <NavLink exact to = '/'>
          <Menu.Item name='Home' icon='home' />
       </NavLink>

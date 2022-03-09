@@ -14,6 +14,18 @@
   border: 2px solid #444435;
 }
 
+.ui.card>.content.extra,
+.ui.cards>.card>.content.extra, 
+{
+  background-color: grey;
+}
+
+.ui.card {
+  display: inline-block;
+  margin: 10px;
+}
+
+
 .code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -26,7 +38,7 @@
 .searchbar {
   width: 50%;
   margin: auto;
-  padding-bottom: 8px;
+  padding: 10px;
 }
 
 .formtext {
@@ -72,15 +84,21 @@
   background-color: #A89B9D;
   color: white;
 } */
-/* 
+
+
+/* .bookCard {
+  width: 10%;
+}
+
+
 .cards {
+  width: 10%;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  margin: 1rem;
   box-shadow: 0 0 7px 0 #ddd;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -100,9 +118,9 @@
   max-height: 225px;
   width: auto;
   height: auto;
-}
+} */
 
-.card:hover {
+/* .card:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
