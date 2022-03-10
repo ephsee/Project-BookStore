@@ -22,12 +22,15 @@ function CustomerCollection({customers, books, orders}) {
     }, [])
 
     console.log(custColl)
+
     const collection = custColl.map(b => {
       return <BookCard key={b.id} bookitem={b} />
     })
-    console.log('collection',collection)
 
-    const showOrders = custOrders.map( ord => <CustomerOrders key={ord.id} custColl={custColl}/>)
+    console.log('collection',collection)
+    console.log('custOrders', custOrders)
+    
+    const showOrders = custOrders.map( ord => <CustomerOrders key={ord.id} ord = {ord} custColl={custColl}/>)
 
   return (
     <div>
@@ -42,7 +45,6 @@ function CustomerCollection({customers, books, orders}) {
                  {showOrders}
         </div>
     </div>
-    // <div>Hello</div>
   )
 }
 
