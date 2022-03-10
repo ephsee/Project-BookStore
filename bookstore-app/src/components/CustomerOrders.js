@@ -15,11 +15,6 @@ function CustomerOrders({custColl, ord}) {
 
     console.log(custOrders)
 
-
-    const orders = Object.values(custOrders).map( o => o.id )
-
-    console.log(orders)
-
     console.log("custColl", custColl)
 
     const book = custColl.filter( b => {
@@ -28,21 +23,25 @@ function CustomerOrders({custColl, ord}) {
         }
     })
     
-    function handleDelete(arr) {
+    function handleDelete() {
 
-        console.log()
+        console.log('book title', book[0].title)
+        console.log('order id', ord.id)
 
-        //   arr.forEach( o => {
-    
-        //     console.log()
-    
-        //   })
-    
-    
-                // fetch(`http://localhost:9293/orders/${id}`,
-                //     { method: "DELETE" })
-                    
-                //     .then(console.log)
+        // fetch(`http://localhost:9293/orders/${ord.id}`,
+        //     { method: "DELETE" })
+        //     .then(r=>r.json())
+        //     .then(console.log)
+
+        fetch(`http://localhost:9293/orders/${ord.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(ord),
+            })
+            .then(r=>r.json())
+            .then(data => console.log('deleted', data))
                     
     }
     console.log('book',book)
