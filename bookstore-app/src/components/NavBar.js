@@ -4,18 +4,7 @@ import {Menu} from 'semantic-ui-react'
 
 function NavBar() {
 
-  return (    
-    // <div className='topnav container-fluid'>
-    //   <div  className='col ms-5'>
-    //     <NavLink exact to='/'><Button icon='home'/></NavLink>
-    //   </div>
-    //   <div className='col'>
-    //     <NavLink to='/books'><Button icon='book' /></NavLink>
-    //   </div>
-    //   <div className='col'>
-    //     <NavLink to='/cart'><Button floated='right' icon='shopping cart'/></NavLink>
-    //   </div>
-    // </div>
+  return (
     <Menu inverted size='large'>
       <NavLink exact to = '/'>
          <Menu.Item name='Home' icon='home' />

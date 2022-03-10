@@ -3,7 +3,6 @@ import {Grid, Form, Button} from 'semantic-ui-react'
 import {useEffect, useState} from 'react'
 
 function BooksCollection({books, setBooks}) {
-
   const [findBook, setFindBook] = useState("")
 
   useEffect(()=>{
@@ -12,13 +11,9 @@ function BooksCollection({books, setBooks}) {
       .then(setBooks)
   },[])
 
-
   function searchBooks(e) {
     setFindBook(e.target.value)
   }
-
-  console.log('books', books)
-
 
   const inStock = books.filter(book => {
     if (book.quantity > 0) {
@@ -33,7 +28,6 @@ function BooksCollection({books, setBooks}) {
       )
     }
   })
-
 
   const foundBooks = searchResult.map( b => <BookCard key={b.id} bookitem={b} /> )
 
@@ -66,14 +60,7 @@ function BooksCollection({books, setBooks}) {
       const sortPubBooks = [...books]
       sortBy(sortPubBooks, 'publisher')
 
-    //make book card collection
-    // const collection = inStock.map(b => {
-    //     return <BookCard key={b.id} bookitem={b}/>
-    // })
-
-
     return(
-
         <div>
             <div className='searchbar'>
             <Form >
@@ -91,9 +78,7 @@ function BooksCollection({books, setBooks}) {
               </Grid>
             </div>
         </div>
-        
     )
-
 }
 
 export default BooksCollection

@@ -5,9 +5,10 @@ import CustomerOrders from './CustomerOrders'
 import {Grid} from 'semantic-ui-react'
 
 function CustomerCollection({customers, books, orders}) {
-    const {id} = useParams()
     const [custColl, setCustColl] = useState([])
     const [custOrders, setCustOrders] = useState([])
+
+    const {id} = useParams()
 
     useEffect( ()=> {
       fetch(`http://localhost:9293/customers/${id}/books`)
@@ -21,9 +22,7 @@ function CustomerCollection({customers, books, orders}) {
         .then(setCustOrders)
     }, [])
 
-        
     function handleDelete(book, order) {
-
       console.log('book title', book.title)
       console.log('order id', order.id)
 
@@ -41,9 +40,6 @@ function CustomerCollection({customers, books, orders}) {
     const collection = custColl.map(b => {
       return <BookCard key={b.id} bookitem={b} />
     })
-
-    console.log('collection',collection)
-    console.log('custOrders', custOrders)
 
     const showOrders = custOrders.map( ord => <CustomerOrders handleDelete={handleDelete} key={ord.id} ord = {ord} custColl={custColl}/>)
 

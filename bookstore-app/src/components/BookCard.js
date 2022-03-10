@@ -1,12 +1,14 @@
 import React from 'react'
-import {Card, Grid, Button, Image} from 'semantic-ui-react'
+import {Card, Grid, Image} from 'semantic-ui-react'
 import {useHistory} from 'react-router-dom'
 
 function BookCard({bookitem}) {
   const history = useHistory()
+  
   function bookPage(){
     history.push(`/books/${bookitem.id}`)
   }
+
   return (
     <Grid.Column className='bookCard'>
       <Card className='card'>

@@ -33,40 +33,29 @@ function App() {
 
   const [cart, setCart] = useState({})
 
-
-  console.log(customers)
-
     return (
       <div className="App App-header">
         <NavBar />
         <Switch>
-
           <Route exact path="/books/:id">
             <Bookpage books={books} cart={cart} setCart={setCart}/>
           </Route>
-
           <Route exact path ='/customers/:id'>
             <CustomerCollection customers={customers} orders={orders} books={books}/>  
           </Route>
-
           <Route path='/customers'>
             <CustomerContainer customers={customers} />
           </Route>
-
           <Route path="/cart">
             <Cart setCart={setCart} cart={cart} customers={customers}/>
           </Route>
-
           <Route path="/books">
             <BooksCollection books={books} setBooks={setBooks}/>
           </Route>
-
           <Route exact path="/">
             <Home books = {books}/>
           </Route>
-
-        </Switch>
-        
+        </Switch>     
       </div>
     );
   }

@@ -5,7 +5,6 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 .buttons{
@@ -28,11 +27,6 @@
   border: 4px solid #444435;
   border-radius: 10px;
 }
-
-/* .ui.card>.content.extra,
-.ui.cards>.card>.content.extra {
-  background-color: grey;
-} */
 
 .ui.card {
   display: inline-block;
@@ -64,10 +58,6 @@
   height: 400px;
 }
 
-/* .ui.centered.grid{
-  background-color: #3c4c34;
-} */
-
 .searchbar {
   width: 50%;
   margin: auto;
@@ -77,8 +67,6 @@
 .formtext {
   align-items: center;
   text-align: center;
-  /* color: white;
-  background-color: black; */
 }
 
 .abook {
@@ -107,8 +95,6 @@
 
 .App {
   text-align: center;
-  /* background-color: #3c4c34; */
-  /* font-size: calc(10px + 2vmin); */
   background: url("./assets/book1.jpg");
   padding-bottom: 500px;
 }
@@ -116,69 +102,3 @@
 .bookCard{
   padding:10px;
 }
-
-/* .topnav {
-  background-color: #CFCFEA ;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: #A89B9D ;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: gray;
-  color: white;
-}
-
-.topnav a.active {
-  background-color: #A89B9D;
-  color: white;
-} */
-
-
-/* .bookCard {
-  width: 10%;
-}
-
-
-.cards {
-  width: 10%;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  box-shadow: 0 0 7px 0 #ddd;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 300px;
-  transition: 1s ease;
-}
-.card .image {
-  height: 225px;
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.card .image img {
-  max-width: 100%;
-  max-height: 225px;
-  width: auto;
-  height: auto;
-} */
-
-/* .card:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  transition: 1s ease;
-} */
