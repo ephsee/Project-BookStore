@@ -21,9 +21,10 @@ function Bookpage({books, cart, setCart}) {
   return(
     <div className = "abook">
       <img src = {showBook.image}></img>
-      <p>{showBook.title}</p>
-      <p>{showBook.genre}</p>
-      <p>{showBook.author}</p>
+      <h2>{showBook.title}</h2>
+      <h3>{showBook.author}</h3>
+      <h4>{showBook.genre}</h4>
+      <p>{showBook.description}</p>
       <Button.Group>
         <Button onClick={handleBuy} icon='add to cart'/>
       </Button.Group>

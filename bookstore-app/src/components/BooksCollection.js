@@ -1,10 +1,17 @@
 import BookCard from "./BookCard"
 import {Grid, Form, Button} from 'semantic-ui-react'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 function BooksCollection({books, setBooks}) {
 
   const [findBook, setFindBook] = useState("")
+
+  useEffect(()=>{
+    fetch('http://localhost:9293/books')
+      .then(r=>r.json())
+      .then(setBooks)
+  },[])
+
 
   function searchBooks(e) {
     setFindBook(e.target.value)

@@ -19,6 +19,8 @@ function Home({books}) {
         <div className='about'>
           ABOUT STUFF
           <p>something and something about the bookstore yadda yadda</p>
+          <hr></hr>
+          <h1>TOP PICKS</h1>
         </div>
       </div>
       <Grid centered columns={10}>
