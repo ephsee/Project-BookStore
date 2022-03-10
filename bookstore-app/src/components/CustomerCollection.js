@@ -13,13 +13,30 @@ function CustomerCollection({customers, books, orders}) {
       fetch(`http://localhost:9293/customers/${id}/books`)
         .then(r=>r.json())
         .then(setCustColl)
-    }, [])
+    }, [custOrders])
 
     useEffect(()=>{
       fetch(`http://localhost:9293/customers/${id}/orders`)
         .then(r=>r.json())
         .then(setCustOrders)
     }, [])
+
+        
+    function handleDelete(book, order) {
+
+      console.log('book title', book.title)
+      console.log('order id', order.id)
+
+      fetch(`http://localhost:9293/orders/${order.id}`, {
+          method: 'DELETE',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(order),
+          })
+          .then(r=>r.json())
+          .then(setCustOrders)   
+    }       
 
     const collection = custColl.map(b => {
       return <BookCard key={b.id} bookitem={b} />
@@ -28,7 +45,7 @@ function CustomerCollection({customers, books, orders}) {
     console.log('collection',collection)
     console.log('custOrders', custOrders)
 
-    const showOrders = custOrders.map( ord => <CustomerOrders key={ord.id} ord = {ord} custColl={custColl}/>)
+    const showOrders = custOrders.map( ord => <CustomerOrders handleDelete={handleDelete} key={ord.id} ord = {ord} custColl={custColl}/>)
 
   return (
     <div>
