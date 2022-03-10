@@ -17,7 +17,7 @@ function CustomerOrders({custColl, ord, handleDelete}) {
         <div>
             <p>Order id: {ord.id}</p>
             <p>Book: {book[0].title}</p>
-            <button onClick={() =>handleDelete(book[0],ord)}>X</button>
+            <button className="buttons" onClick={() =>handleDelete(book[0],ord)}>X</button>
         </div>
 
     )

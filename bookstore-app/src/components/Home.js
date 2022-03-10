@@ -17,10 +17,11 @@ function Home({books}) {
       <div className='logo'>
         <img src={require ('../assets/CoopAndPeasant.jpg')} alt='Coop and Peasant Logo' />
         <div className='about'>
-          ABOUT STUFF
-          <p>something and something about the bookstore yadda yadda</p>
+          <h2>Welcome to the Coop and Peasant...<br></br>Stay a while and Listen.</h2>
+          
           <hr></hr>
-          <h1>TOP PICKS</h1>
+
+          <h1>Some of our Favorites</h1>
         </div>
       </div>
       <Grid centered columns={10}>

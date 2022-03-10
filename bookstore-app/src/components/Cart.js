@@ -40,15 +40,26 @@ function Cart({cart, customers, setCart}) {
     setCart({})
   }
 
+
+  function clearCart () {
+    setCart({})
+  }
+
   return (
-    <div>Cart
-      <ul>
-        <div className="about">{showCart}</div>
-      </ul>
-      <select onChange = { (e) => handleChange(e)}>
-        {userOptions}
-      </select>
-      <button onClick={() => handleClick(showCart)}>Checkout</button>
+    <div className='about'>
+      
+        <div className="size">
+          <div><h2><u>CART</u></h2></div>
+          {showCart}
+        </div>
+        
+        
+        <select onChange = { (e) => handleChange(e)}>
+          {userOptions}
+        </select>
+        <button className="buttons" onClick={() => handleClick(showCart)}>Checkout</button>
+        <button className="buttons" onClick={() => clearCart()}>Clear Cart</button>
+        
     </div>
   )
 }
