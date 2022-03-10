@@ -54,7 +54,7 @@ function App() {
           </Route>
 
           <Route path="/cart">
-            <Cart cart={cart} customers={customers}/>
+            <Cart setCart={setCart} cart={cart} customers={customers}/>
           </Route>
 
           <Route path="/books">

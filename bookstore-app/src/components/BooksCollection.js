@@ -2,7 +2,7 @@ import BookCard from "./BookCard"
 import {Grid, Form, Button} from 'semantic-ui-react'
 import {useState} from 'react'
 
-function BooksCollection({books}) {
+function BooksCollection({books, setBooks}) {
 
   const [findBook, setFindBook] = useState("")
 
@@ -10,16 +10,25 @@ function BooksCollection({books}) {
     setFindBook(e.target.value)
   }
 
-  console.log(books)
+  console.log('books', books)
 
-  const searchResult = books.filter((book) => {
-    return (
-      book.title.toLowerCase().includes(findBook.toLowerCase()) || book.author.toLowerCase().includes(findBook.toLowerCase())
-    )
+
+  const inStock = books.filter(book => {
+    if (book.quantity > 0) {
+      return book
+    }
   })
 
-  const foundBooks = searchResult.map( b => <BookCard key={b.id} bookitem={b} /> )
+  const searchResult = books.filter((book) => {
+    if (book.quantity > 0){
+      return (
+        book.title.toLowerCase().includes(findBook.toLowerCase()) || book.author.toLowerCase().includes(findBook.toLowerCase())
+      )
+    }
+  })
 
+
+  const foundBooks = searchResult.map( b => <BookCard key={b.id} bookitem={b} /> )
 
     const sortBy = (arr, key) => {
         arr.sort((a,b) => {
@@ -51,9 +60,9 @@ function BooksCollection({books}) {
       sortBy(sortPubBooks, 'publisher')
 
     //make book card collection
-    const collection = books.map(b => {
-        return <BookCard key={b.id} bookitem={b}/>
-    })
+    // const collection = inStock.map(b => {
+    //     return <BookCard key={b.id} bookitem={b}/>
+    // })
 
 
     return(
