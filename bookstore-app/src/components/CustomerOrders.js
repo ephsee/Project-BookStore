@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
-function CustomerOrders() {
+function CustomerOrders({custColl}) {
 
     const [custOrders, setCustOrders] = useState([])
     const {id} = useParams()
@@ -15,9 +15,12 @@ function CustomerOrders() {
 
     console.log(custOrders)
 
+
     const orders = Object.values(custOrders).map( o => o.id )
 
     console.log(orders)
+
+    console.log("custColl", custColl)
     
     function handleDelete(arr) {
 
@@ -37,23 +40,12 @@ function CustomerOrders() {
                     
         }
 
-
-    const showOrders = custOrders.map( ord => {
-        return (
-            <div className='about'>
-              <h2>ORDERS: </h2>
-              <p>Order id: {ord.id}</p>
-              <p>Book id: {ord.book_id}</p><p>Customer id: {ord.customer_id}</p>
-              <button onClick={handleDelete}>X</button>
-            </div>
-          )
-      })
-
-
     return(
 
         <div>
-                 {showOrders}
+            {/* <p>Order id: {ord.id}</p>
+            <p>Book: {ord.book_id}</p>
+            <button onClick={handleDelete}>X</button> */}
         </div>
 
     )

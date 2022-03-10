@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import BookCard from './BookCard'
+import CustomerOrders from './CustomerOrders'
 import {Grid} from 'semantic-ui-react'
 
 function CustomerCollection({customers, books, orders}) {
@@ -26,7 +27,7 @@ function CustomerCollection({customers, books, orders}) {
     })
     console.log('collection',collection)
 
-    const showOrders = custOrders.map( ord => <div className='about' ><h1>ORDERS: </h1><p>Order id: {ord.id}</p><p>Book id: {ord.book_id}</p><p>Customer id: {ord.customer_id}</p></div>)
+    const showOrders = custOrders.map( ord => <CustomerOrders key={ord.id} custColl={custColl}/>)
 
   return (
     <div>
@@ -35,7 +36,11 @@ function CustomerCollection({customers, books, orders}) {
         {collection}
       </Grid.Row>
     </Grid>
-      {showOrders}
+
+        <div className='about'>
+            <h2>ORDERS: </h2>
+                 {showOrders}
+        </div>
     </div>
     // <div>Hello</div>
   )
